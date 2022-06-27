@@ -69,6 +69,10 @@ body {
     border-bottom: 2px solid rgb(0, 0, 0, 0.4);
 }
 
+.item-complete {
+    text-decoration: line-through rgba(0, 0, 0, 1);
+}
+
 .align > label{
     padding-left: 1em;
 }
@@ -94,6 +98,7 @@ hr {
     gap: 20px;
     padding: 10px 0;
     font-size: 18px;
+    user-select: none;
 }
 
 .user-interactions > li:hover {
