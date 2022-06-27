@@ -4,8 +4,10 @@ const form = document.querySelector('.input');
 form.addEventListener('submit', event => {
     event.preventDefault();
 
-    const input = form.add.value.trim();  
-    if (input.length){
+    const input = form.add.value.trim();
+    if(input.length) {
         form.reset();
+    } else {
+        return false;
     }
 })
