@@ -67,6 +67,10 @@ span {
     padding-left: 2em;
 }
 
+.delete {
+    cursor: pointer;
+}
+
 hr {
     opacity: 0.2;
 }

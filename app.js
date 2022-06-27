@@ -6,7 +6,7 @@ const generateItem = input => {
     const html = 
     `<li>
         <span>${input}</span>
-        <i class="fa-brands fa-xbox"></i>
+        <i class="fa-brands fa-xbox delete"></i>
     </li>
     <hr>`
 
@@ -22,5 +22,11 @@ form.addEventListener('submit', event => {
         generateItem(input)
     } else {
         return false;
+    }
+})
+
+list.addEventListener('click', event => {
+    if(event.target.classList.contains('delete')){
+        event.target.parentElement.remove();
     }
 })
