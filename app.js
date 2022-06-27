@@ -4,11 +4,10 @@ const form = document.querySelector('.input');
 const generateItem = input => {
 
     const html = 
-    `<li>
+    `<li class='items'>
         <span>${input}</span>
         <i class="fa-brands fa-xbox delete"></i>
-    </li>
-    <hr>`
+    </li>`
 
     list.innerHTML += html;
 }

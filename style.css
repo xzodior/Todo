@@ -1,3 +1,7 @@
+:root {
+    --hover-color: hsl(220, 98%, 61%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +17,9 @@ body {
     width: 100%;
     height: 100%;
     background: url(./images/bg-desktop-dark.jpg) no-repeat;
-    background-size: 100% 50%;
+    background-size: 100% 40%;
     font-family: 'Nunito', sans-serif;
+    position: absolute;
 }
 
 .container {
@@ -37,7 +42,7 @@ body {
 .add {
     width: 100%;
     margin-bottom: 1em;
-    padding: 1em 3em;
+    padding: 1em 2.7em;
     font-size: 30px;
     background: hsl(235, 24%, 19%);
     border: none;
@@ -56,23 +61,45 @@ body {
     list-style-type: none;
 }
 
-li {
+.items {
     padding: 1em 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.4);
 }
 
-span {
-    padding-left: 2em;
+.align > label{
+    padding-left: 1em;
 }
 
 .delete {
     cursor: pointer;
 }
 
+.delete:hover {
+    color: var(--hover-color);
+    transition: 0.3s;
+}
+
 hr {
     opacity: 0.2;
+}
+
+.user-interactions {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.user-interactions > li:hover {
+    transition: 0.3s;
+    color: var(--hover-color);
+    cursor: pointer;
 }
 
 @media (max-width: 835px) {
