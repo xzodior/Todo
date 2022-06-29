@@ -6,7 +6,6 @@ const all = document.querySelector('.all');
 const active = document.querySelector('.active')
 const clearCompleted = document.querySelector('.clear-completed');
 const itemCounter = document.querySelector('.number')
-console.log(itemCounter)
 
 const generateItem = input => {
 
@@ -60,8 +59,8 @@ completed.addEventListener('click', event => {
 
 all.addEventListener('click', event => {
     Array.from(list.children).forEach(item => {
-        return item.style.display = 'flex';
-    })
+        item.style.display = 'flex';
+    });
 })
 
 // ^
@@ -106,3 +105,31 @@ updateDisplay();
 // Created a function which would track how many items are in the todo.
 // This function will be called inside event listeners that remove or add an item.
 // to which the counter will update.
+
+const toggle = document.getElementById('dark');
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+const add = document.querySelector('.add');
+const todo = document.querySelector('.todo-container');
+const userInteractions = document.querySelector('.user-interactions');
+
+toggle.addEventListener('click', event =>{
+    if(toggle.id === 'dark'){
+        toggle.setAttribute('src', './images/icon-moon.svg');
+        toggle.id = 'light';
+        body.classList.toggle('body-light');
+        html.classList.toggle('html-light');
+        add.classList.toggle('add-light');
+        todo.classList.toggle('todo-container-light');
+        userInteractions.classList.toggle('user-interactions-light');
+    } else if (toggle.id === 'light'){
+        toggle.setAttribute('src', './images/icon-sun.svg');
+        toggle.id = 'dark';
+        body.classList.toggle('body-light');
+        html.classList.toggle('html-light');
+        add.classList.toggle('add-light');
+        todo.classList.toggle('todo-container-light');
+        userInteractions.classList.toggle('user-interactions-light');
+    }
+    console.log(toggle.id)
+})

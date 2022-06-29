@@ -12,6 +12,10 @@ html {
     background-color: hsl(235, 21%, 11%);
 }
 
+.html-light {
+    background-color: white;
+}
+
 body {
     color: white;
     width: 100%;
@@ -20,6 +24,12 @@ body {
     background-size: 100% 40%;
     font-family: 'Nunito', sans-serif;
     position: absolute;
+}
+
+.body-light {
+    color: darkblue;
+    background: url(./images/bg-desktop-light.jpg )no-repeat;
+    background-size: 100% 40%;
 }
 
 .container {
@@ -37,6 +47,15 @@ body {
 .heading > h1 {
     font-size: 5rem;
     letter-spacing: 30px;
+    color: white;
+}
+
+.heading > p > img {
+    cursor: pointer;
+}
+
+#light {
+    background-image: url(./images/icon-moon.svg);
 }
 
 .add {
@@ -50,11 +69,22 @@ body {
     border-radius: 8px;
 }
 
+.add-light {
+    background: white;
+    color: hsl(235, 19%, 35%);
+}
+
 .todo-container {
     background-color: hsl(235, 24%, 19%);
     font-size: 30px;
     border-radius: 8px;
     box-shadow: 20px 20px 200px 0px black;
+}
+
+.todo-container-light {
+    background-color: white;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.123);
+    color: hsl(235, 19%, 35%);
 }
 
 #todo {
@@ -93,18 +123,40 @@ hr {
 .user-interactions {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
     padding: 10px 0;
     font-size: 18px;
     user-select: none;
+    color: rgba(255, 255, 255, 0.322);
 }
 
-.user-interactions > li:hover {
+.user-interactions-light {
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.user-interactions > li:nth-child(1n + 2):hover {       
     transition: 0.3s;
     color: var(--hover-color);
     cursor: pointer;
+}
+
+.user-interactions-light > li:nth-child(1n + 2):hover {
+    color: black;
+}
+
+input[type=checkbox] {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    background: url(./images/icon-check.svg) no-repeat;
+    background-size: 100% 100%;
 }
 
 @media (max-width: 835px) {
