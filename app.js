@@ -122,6 +122,9 @@ toggle.addEventListener('click', event =>{
         add.classList.toggle('add-light');
         todo.classList.toggle('todo-container-light');
         userInteractions.classList.toggle('user-interactions-light');
+        Array.from(check).forEach(item => {
+            item.classList.toggle('check-light')
+        })
     } else if (toggle.id === 'light'){
         toggle.setAttribute('src', './images/icon-sun.svg');
         toggle.id = 'dark';
@@ -130,6 +133,9 @@ toggle.addEventListener('click', event =>{
         add.classList.toggle('add-light');
         todo.classList.toggle('todo-container-light');
         userInteractions.classList.toggle('user-interactions-light');
+        Array.from(check).forEach(item => {
+            item.classList.toggle('check-light')
+        })
     }
     console.log(toggle.id)
 })

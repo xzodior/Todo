@@ -74,6 +74,22 @@ body {
     color: hsl(235, 19%, 35%);
 }
 
+
+@media (max-width: 500px){
+    .heading {
+        padding: 3em 0;
+    }
+    
+    .heading > h1{
+        font-size: 2.5em;
+    }
+
+    .add {
+        padding: 1em 2em;
+        font-size: 1em;
+    }
+}
+
 .todo-container {
     background-color: hsl(235, 24%, 19%);
     font-size: 30px;
@@ -116,6 +132,12 @@ body {
     transition: 0.3s;
 }
 
+@media (max-width: 500px){
+    .todo-container {
+        font-size: 1em;
+    }
+}
+
 hr {
     opacity: 0.2;
 }
@@ -145,18 +167,39 @@ hr {
     color: black;
 }
 
-input[type=checkbox] {
+.check {
     width: 2em;
     height: 2em;
     border-radius: 50%;
     vertical-align: middle;
-    border: 1px solid;
+    outline: 1px solid rgba(255, 255, 255, 0.185);
     appearance: none;
     -webkit-appearance: none;
-    outline: none;
     cursor: pointer;
-    background: url(./images/icon-check.svg) no-repeat;
-    background-size: 100% 100%;
+}
+
+.check-light {
+    outline: 1px solid black;
+}
+
+.check:hover {
+    outline: 2px solid hsl(192, 100%, 67%);
+}
+
+.check:checked {
+    background: url(./images/icon-check.svg) no-repeat 50% 50%, linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    outline: none;
+}
+
+@media (max-width: 500px){
+    .user-interactions {
+        font-size: 12px;
+    }
+
+    .check {
+        width: 1.5em;
+        height: 1.5em;
+    }
 }
 
 @media (max-width: 835px) {
