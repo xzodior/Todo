@@ -76,6 +76,11 @@ body {
 
 
 @media (max-width: 500px){
+    body {
+        background: url(./images/bg-mobile-dark.jpg)no-repeat;
+        background-size: 100% 35%;
+    }
+
     .heading {
         padding: 3em 0;
     }
@@ -136,6 +141,10 @@ body {
     .todo-container {
         font-size: 1em;
     }
+
+    .items {
+        padding: 1.5em 1em;
+    }
 }
 
 hr {
@@ -172,14 +181,10 @@ hr {
     height: 2em;
     border-radius: 50%;
     vertical-align: middle;
-    outline: 1px solid rgba(255, 255, 255, 0.185);
+    outline: 1px solid black;
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
-}
-
-.check-light {
-    outline: 1px solid black;
 }
 
 .check:hover {

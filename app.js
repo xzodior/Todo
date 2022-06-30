@@ -11,10 +11,10 @@ const generateItem = input => {
 
     const html = 
     `<li class="items">
-    <div class="align">
-        <input type="checkbox" name="check" class="check">
-        <label for="check">${input}</label>
-    </div>
+        <div class="align">
+            <input type="checkbox" name="check" class="check">
+            <label for="check">${input}</label>
+        </div>
     <i class="fa-brands fa-xbox delete"></i>
     </li>`
 
@@ -93,7 +93,7 @@ clearCompleted.addEventListener('click', event => {
 // ^
 // remove() to completely remove the item from the DOM
 
-let count = 0;
+let count = 3;
 
 function updateDisplay (){
     itemCounter.innerHTML = count;
